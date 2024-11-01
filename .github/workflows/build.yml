@@ -30,7 +30,7 @@ jobs:
           oci: true
 
       - name: Push to ghcr.io
-        uses: redhat-actions/push-to-registry@v2.6
+        uses: redhat-actions/push-to-registry@v2.8
         with:
           image: ${{ env.IMAGE_NAME }}
           tags: "latest"

@@ -9,8 +9,8 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: "aaradhak-image"
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
-  REGISTRY_USER: ${{ secrets.GHCR_USERNAME }}
-  REGISTRY_PASSWORD: ${{ secrets.GHCR_TOKEN }}
+  REGISTRY_USER: ${{ github.actor }}
+  REGISTRY_PASSWORD: ${{ github.token }}
 
 
 jobs:

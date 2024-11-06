@@ -1,9 +1,6 @@
-FROM quay.io/fedora/fedora-silverblue:41
+FROM quay.io/fedora/fedora-coreos:stable
 # First install bootc and dnf until it's included...
 RUN rpm-ostree install bootc dnf5 dnf5-plugins && \
-    ## Add vscode repo and key
-    rpm --import https://packages.microsoft.com/keys/microsoft.asc && \
-    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo' && \
     dnf -y install \
     # sign git tags for releases
     git-evtag pinentry \

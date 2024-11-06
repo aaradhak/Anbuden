@@ -1,7 +1,6 @@
-FROM quay.io/fedora/fedora-coreos:stable
+FROM quay.io/fedora/fedora-coreos:testing
 # First install bootc and dnf until it's included...
-RUN rpm-ostree install bootc dnf5 dnf5-plugins && ln -s /usr/bin/dnf5 /usr/bin/dnf && \
-    dnf -y install \
+RUN dnf -y install \
     # sign git tags for releases
     git-evtag pinentry \
     # local debug tools 

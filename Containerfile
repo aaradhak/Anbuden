@@ -8,4 +8,7 @@ RUN dnf -y install \
     # dev tools
     make xsel strace \
     # TMUX TOOL
-    tmux 
+    tmux \
+    # run local qemu vms
+    libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm \
+    virt-install virt-manager virt-viewer 

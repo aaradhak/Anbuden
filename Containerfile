@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-coreos:testing
+FROM quay.io/fedora/fedora-coreos:next
 
 # First install bootc and dnf until it's included...
 RUN dnf -y install \
